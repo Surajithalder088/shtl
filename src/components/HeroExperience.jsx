@@ -3,25 +3,32 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import {useMediaQuery} from 'react-responsive'
 import { Room } from './Room'
+import { Phone } from './Phone'
 
 const HeroExperience = () => {
     const isTablet= useMediaQuery({query:'(max-width:1024px)'})
                 const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
     return (
-   <Canvas camera={{position:[0,0,15] , fov:45}}>
-        <ambientLight intensity={0.2} color={"#1a1a40"}/>
-      <directionalLight position={[5,5,5]} intensity={10}/>
-      <OrbitControls
-      enablePan={false}
-      enableZoom={!isTablet}
-      maxDistance={20}
-      minDistance={5}
-      minPolarAngle={Math.PI/5}
-      maxPolarAngle={Math.PI/2}
-      />
-       <Room scale={1.8} position={[0, -2, 0]} />
-   </Canvas>
+   <div className=' realtive w-[20vw] h-[50vh]  border-amber-50 object-contain overflow-hidden  rounded-2xl'>
+       {/* <Room scale={2} position={[0, -3, 0]} /> */}
+
+      <video
+           className="w-full h-full object-cover object-bottom"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/images/hero.mp4" type="video/mp4" />
+        </video>
+          <div className='
+    sticky inset-0 w-[20vw] h-[50vh]
+    bg-black/40
+    backdrop-blur-[0.4px]
+  ' />
+       </div> 
+  
   )
 }
 

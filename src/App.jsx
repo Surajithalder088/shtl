@@ -1,7 +1,8 @@
 import React from 'react'
-import Hero from './sections/Hero'
+import Hero, { PremiumBackground } from './sections/Hero'
 import AboutSection from './sections/About'
 import Services from './sections/Services'
+import ExperienceSection from './sections/ExperienceSection'
 
 
 
@@ -52,7 +53,8 @@ const App = () => {
 
   
 ">
-        <p className='flex-1 text-white flex items-center cursor-pointer' onClick={() => smoothScrollTo(window.innerHeight * 0)}>
+        <p className='flex-1 text-white flex items-center cursor-pointer pl-15'
+         onClick={() => smoothScrollTo(window.innerHeight * 0)}>
           <img src='/images/shtl-logo.png' className='size-12'/>
           <span className='text-2xl font-serif italic'>SH TECH LABS</span></p>
 
@@ -107,12 +109,15 @@ const App = () => {
 
       </div>
 
-       <div className="relative z-20">
-        <div className='bg-white h-[100vh]'>
-          hey
-        </div>
+         <div id='services' className="relative z-15">
+         <div className="sticky top-0">
+            <ExperienceSection />
+          </div>
 
-       </div>
+       
+     
+
+      </div>
 
       
        </div>

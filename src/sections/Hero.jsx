@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../components/Button'
 import HeroExperience from '../components/HeroExperience'
 import Bg from '../components/Bg'
+import PhoneExperience from '../components/PhoneExperience'
 
 const words = [
   { test: 'Ideas', imgPath: '/images/ideas.png' },
@@ -19,7 +20,7 @@ const words = [
      5. Corner accent beams
      6. Soft chromatic glow orbs
 ──────────────────────────────────────────────────────────────────────────── */
-const PremiumBackground = () => (
+export const PremiumBackground = () => (
   <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
 
     {/* ① Base gradient — deep navy → near-black */}
@@ -235,6 +236,8 @@ const PremiumBackground = () => (
 )
 
 const Hero = () => {
+
+
   return (
     <section id="hero" className="fixed overflow-hidden">
   
@@ -257,22 +260,19 @@ const Hero = () => {
       >
         {/* left */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-2">
-          <div className="flex flex-col gap-7">
-            <h1 className="hero-header h-[80px]mb-3">
+          <div className="flex flex-col gap-1">
+            <h1 className="hero-header flex items-center gap-2">
               <span className='pb-4'>Shaping</span>
-              <span className="slide overflow-hidden h-full">
-                <span className="wrapper">
-                  {words.map((item, index) => (
-                    <span key={index} className="flex items-center md:gap-3 gap-1 pb-2">
-                      <img
-                        src={item.imgPath}
-                        alt={item.test}
-                        className="xl:size-5 md:size-4 size-3 md:p-1 p-0 rounded-full bg-white-50"
-                      />
-                      <span>{item.test}</span>
-                    </span>
-                  ))}
-                </span>
+              <span className="overflow-hidden h-full">
+    
+          <img
+            src={'/images/ideas.png'}
+            className='size-8 bg-white p-1 rounded-full'
+          />
+
+              </span>
+              <span className="overflow-hidden h-full">
+                Ideas
               </span>
             </h1>
             <h1 className="hero-header">into Real Projects</h1>
@@ -287,10 +287,12 @@ const Hero = () => {
 
         {/* right */}
         <figure>
-          <div className="hero-3d-layout">
+          <div className=" p-24">
             <HeroExperience />
           </div>
         </figure>
+
+        
       </div>
     </section>
   )

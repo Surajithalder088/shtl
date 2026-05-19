@@ -2,16 +2,18 @@ import React, { useEffect, useState, useRef } from 'react'
 
 const Services = () => {
   const [isFixed, setIsFixed] = useState(false)
-  const ref = useRef(null)
+  const ref1 = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!ref.current) return
+      if (!ref1.current) return
 
-      const top = ref.current.getBoundingClientRect().top
+      const top = ref1.current.getBoundingClientRect().top
 
       if (top <= 0) {
         setIsFixed(true)
+        console.log(true);
+        
       } else {
         setIsFixed(false)
       }
@@ -21,16 +23,24 @@ const Services = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  return (
-    <div ref={ref} className="h-screen w-full">
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % words.length)
+  }, 1500)
 
-      <section
+  return () => clearInterval(interval)
+}, [])
+
+  return (
+    <div ref={ref1} className="h-screen w-full ">
+
+      <section style={{position:isFixed ? "fixed" : "relative"}}
         className={`
           h-screen w-full rounded-t-4xl
           flex items-center justify-center
           relative overflow-hidden
           transition-all duration-300
-          ${isFixed ? 'fixed top-0 left-0 z-30' : 'relative'}
+          ${isFixed ? "fixed top-0 left-0 z-20" : "relative"}
         `}
       >
 
@@ -45,7 +55,7 @@ const Services = () => {
           <source src="/images/services.mp4" type="video/mp4" />
         </video>
 
-        {/* 🔥 DARK OVERLAY */} <h1 className='absolute top-10 text-5xl font-semibold'>Services we provide</h1>
+        {/* 🔥 DARK OVERLAY */} <h1 className='absolute top-16 text-5xl font-semibold'>Services we provide</h1>
         {/* <div className="absolute inset-0 bg-black/50" /> */}
 
         {/* CONTENT */}
