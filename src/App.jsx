@@ -3,6 +3,7 @@ import Hero, { PremiumBackground } from './sections/Hero'
 import AboutSection from './sections/About'
 import Services from './sections/Services'
 import ExperienceSection from './sections/ExperienceSection'
+import TechStack from './sections/TechStack'
 
 
 
@@ -73,10 +74,30 @@ const App = () => {
 
       {/* content */}
          <Hero />
-           <div id='about' className="relative z-10">
+         
+           <div id='services' className="relative z-10">
 
         {/* THIS creates scroll space equal to hero */}
-        <div className="h-screen" />
+       
+
+        {/* About comes after scroll space */}
+       
+      <div className="h-screen" />
+
+          <div className="sticky top-0">
+            
+            <Services />
+          </div>
+
+       
+     
+
+      </div>
+
+           <div id='about' className="relative z-15">
+
+        {/* THIS creates scroll space equal to hero */}
+      
 
         {/* About comes after scroll space */}
        
@@ -91,27 +112,10 @@ const App = () => {
 
       </div>
 
-           <div id='services' className="relative z-15">
-
-        {/* THIS creates scroll space equal to hero */}
-       
-
-        {/* About comes after scroll space */}
-       
-    
-
-          <div className="sticky top-0">
-            <Services />
-          </div>
-
-       
-     
-
-      </div>
-
-         <div id='services' className="relative z-15">
+         <div id='experience' className="relative z-15 bg-black">
          <div className="sticky top-0">
             <ExperienceSection />
+            <TechStack/>
           </div>
 
        

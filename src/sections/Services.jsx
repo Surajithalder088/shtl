@@ -32,7 +32,7 @@ const Services = () => {
 }, [])
 
   return (
-    <div ref={ref1} className="h-screen w-full ">
+    <div ref={ref1} className={`h-screen w-full `}>
 
       <section style={{position:isFixed ? "fixed" : "relative"}}
         className={`
@@ -54,6 +54,7 @@ const Services = () => {
         >
           <source src="/images/services.mp4" type="video/mp4" />
         </video>
+        
 
         {/* 🔥 DARK OVERLAY */} <h1 className='absolute top-16 text-5xl font-semibold'>Services we provide</h1>
         {/* <div className="absolute inset-0 bg-black/50" /> */}
@@ -79,8 +80,16 @@ const Services = () => {
                     </div>
 
         </div>
+        
 
       </section>
+
+         {/* <section style={{ background:
+          'radial-gradient(ellipse 120% 80% at 50% 10%, #07122b 0%, #020812 55%, #000000 100%)',
+      }}
+    className='w-full relative md:pt-40 pt-20 h-[100vh] section-padding xl:px-0 rounded-t-4xl overflow-y-auto no-scrollbar'>
+      hghgjhghh
+    </section> */}
 
     </div>
   )
