@@ -11,7 +11,7 @@ const textStackIcone=[
 
 const TechStack = () => {
   return (
-    <div className="flex-center section-padding bg-black">
+    <div className="flex-center section-padding bg-black relative">
         <div className='flex flex-col items-center gap-4 w-full h-full md:px-10 px-5'>
              <div className='hero-badge'>
         <p>What we bring to the table</p>
@@ -23,7 +23,7 @@ const TechStack = () => {
       <div className="text-grid">
         {textStackIcone.map((icon,index)=>(
             <div key={index} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
-                <div className="tech-card-animated-bg"/>
+                {/* <div className="tech-card-animated-bg"/> */}
                     <div className="tech-card-content">
                         <div className="tech-icon-wrapper">
                             <Techicons model={icon}/>

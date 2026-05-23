@@ -77,31 +77,14 @@ const App = () => {
          
            <div id='services' className="relative z-10">
 
-        {/* THIS creates scroll space equal to hero */}
-       
-
-        {/* About comes after scroll space */}
-       
-      <div className="h-screen" />
-
           <div className="sticky top-0">
-            
+            <div className="h-screen" />
             <Services />
           </div>
-
-       
-     
 
       </div>
 
            <div id='about' className="relative z-15">
-
-        {/* THIS creates scroll space equal to hero */}
-      
-
-        {/* About comes after scroll space */}
-       
-    
 
           <div className="sticky top-0">
             <AboutSection />
@@ -115,7 +98,7 @@ const App = () => {
          <div id='experience' className="relative z-15 bg-black">
          <div className="sticky top-0">
             <ExperienceSection />
-            <TechStack/>
+            
           </div>
 
        

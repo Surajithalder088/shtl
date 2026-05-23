@@ -4,6 +4,7 @@ import GlowCard from '../components/GlowCard'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import TechStack from './TechStack'
 
 gsap.registerPlugin(ScrollTrigger)
  const expCards=[
@@ -205,7 +206,7 @@ const ExperienceSection = () => {
     </div>
 
   
-
+          <TechStack/>
 
    </section>
   )
