@@ -4,7 +4,7 @@ import Techicons from '../components/Models/Techicons'
 const textStackIcone=[
    
     {name:"React",modelPath:"/models/react.glb",scale:1,rotation:[0,0,0]},
-    {name:"Node.js",modelPath:"/models/bg.glb",scale:1,rotation:[0,0,0]},
+    {name:"Node.js",modelPath:"/models/room.glb",scale:1,rotation:[0,0,0]},
     {name:"Python",modelPath:"/models/python.glb",scale:0.07,rotation:[0,0,0]},
     {name:"Docker",modelPath:"/models/docker.glb",scale:23,rotation:[0,0,0]},
     {name:"Typescript",modelPath:"/models/typescript.glb",scale:24,rotation:[0,0,0]},
