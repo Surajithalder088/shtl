@@ -2,11 +2,12 @@ import React from 'react'
 import Techicons from '../components/Models/Techicons'
 
 const textStackIcone=[
-    {name:"React",modelPath:"/images/react.png",scale:1,rotation:[0,0,0]},
-    {name:"Node.js",modelPath:"/images/node.png",scale:1,rotation:[0,0,0]},
-    {name:"Python",modelPath:"/images/python.png",scale:1,rotation:[0,0,0]},
-    {name:"Django",modelPath:"/images/django.png",scale:1,rotation:[0,0,0]},
-    {name:"MongoDB",modelPath:"/images/mongodb.png",scale:1,rotation:[0,0,0]},
+   
+    {name:"React",modelPath:"/models/react.glb",scale:1,rotation:[0,0,0]},
+    {name:"Node.js",modelPath:"/models/bg.glb",scale:1,rotation:[0,0,0]},
+    {name:"Python",modelPath:"/models/python.glb",scale:0.07,rotation:[0,0,0]},
+    {name:"Docker",modelPath:"/models/docker.glb",scale:23,rotation:[0,0,0]},
+    {name:"Typescript",modelPath:"/models/typescript.glb",scale:24,rotation:[0,0,0]},
 ]
 
 const TechStack = () => {
@@ -20,13 +21,16 @@ const TechStack = () => {
          <p>Technologies we use</p>
       </div>
 
-      <div className="text-grid">
+      <div className="text-grid flex items-center gap-2">
         {textStackIcone.map((icon,index)=>(
-            <div key={index} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
+            <div key={index} className="card-border tech-card overflow-hidden group md:rounded-full xl:rounded-lg rounded-lg">
                 {/* <div className="tech-card-animated-bg"/> */}
                     <div className="tech-card-content">
                         <div className="tech-icon-wrapper">
                             <Techicons model={icon}/>
+                        </div>
+                        <div className="padding-x w-full">
+                             <p> {icon.name}</p>
                         </div>
 
                     </div>

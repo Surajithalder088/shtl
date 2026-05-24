@@ -206,7 +206,7 @@ const ExperienceSection = () => {
     </div>
 
   
-          <TechStack/>
+          {/* <TechStack/> */}
 
    </section>
   )

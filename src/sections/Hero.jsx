@@ -28,8 +28,8 @@ export const PremiumBackground = () => (
       style={{
         position: 'absolute',
         inset: 0,
-        background:
-          'radial-gradient(ellipse 120% 80% at 50% 10%, #07122b 0%, #020812 55%, #000000 100%)',
+      background:
+  'radial-gradient(ellipse at top, #00f0ff44 0%, #08171b 28%, #020202 60%, #000000 100%)'
       }}
     />
 

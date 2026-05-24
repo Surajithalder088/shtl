@@ -160,8 +160,11 @@ const Services = () => {
   },[])
 
   return (
-    <div ref={ref1} className={`h-fit w-full rounded-t-full border-t  border-white/20
-    shadow-[0_-30px_80px_rgba(255,255,255,0.18),0_-10px_30px_rgba(255,255,255,0.12)]`}>
+    <div ref={ref1} className={`h-fit w-full rounded-t-full border-t     border-cyan-300/50
+
+    shadow-[0_-60px_180px_rgba(0,255,255,0.55),
+            0_-30px_120px_rgba(0,255,255,0.45),
+            0_-10px_60px_rgba(255,255,255,0.25)]`}>
 
       <section style={{position:isFixed ? "fixed" : "relative"}}
         className={`
@@ -281,7 +284,9 @@ const Services = () => {
                 )}
                 </div>
 
-                <div style={{height:"20vh"}}></div>
+                <div className="h-fit py-14">
+                    <TechStack/>
+                </div>
         
               </div>
                
