@@ -228,8 +228,8 @@ const Services = () => {
       {isFixed && <div style={{height:"60vh"}}/> }
 
          <section
-    className='w-full relative md:pt-20 pt-10 min-h-[100vh]  xl:px-0  overflow-y-auto no-scrollbar bg-black'>
-         <div className='w-full h-full md:px-20 px-30'>
+    className='w-full relative md:pt-20 pt-10 min-h-[100vh]  xl:px-0 px-0 overflow-y-auto no-scrollbar bg-black'>
+         <div className={`w-full h-full ${isMobile?'px-6':'p-20'}`}>
                 <div className='flex flex-col items-center gap-4'>
               
           <div className='hero-badge'>
@@ -240,7 +240,7 @@ const Services = () => {
               </div>
               <div style={{width:"100%"}} className='mt-32 relative'>
               
-                <div className='relative z-50 xl:space-y-22 space-y-10'>
+                <div style={{width:"100%"}} className='relative z-50 xl:space-y-22 space-y-10'>
                 {expCards.map((card,index)=>
                   <div key={index} className="exp-card-wrapper">
                    <div className='xl:w-2/6 '>

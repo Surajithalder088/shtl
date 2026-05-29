@@ -3,6 +3,7 @@ import Button from '../components/Button'
 import HeroExperience from '../components/HeroExperience'
 import Bg from '../components/Bg'
 import PhoneExperience from '../components/PhoneExperience'
+import { useMediaQuery } from 'react-responsive'
 
 const words = [
   { test: 'Ideas', imgPath: '/images/ideas.png' },
@@ -236,7 +237,7 @@ export const PremiumBackground = () => (
 )
 
 const Hero = () => {
- const [isMobile,setIsMobile] = useState(window.innerWidth < 768);
+const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
   return (
     <section id="hero" className="fixed overflow-hidden">
@@ -250,16 +251,16 @@ const Hero = () => {
         <Bg />
       </div>
 
-      <div style={{flexDirection: isMobile ? 'column' : 'row'}}
-        className="hero-layout
+      <div style={{flexDirection: isMobile ? 'column ' : 'row '}}
+        className={`hero-layout
           border border-white/20
-          m-15 rounded-2xl
+          ${isMobile?'m-8':'m-15'} my-16 rounded-2xl
           bg-white/5
           backdrop-blur-sm
-          shadow-[0_0_60px_rgba(0,0,0,0.6)]"
+          shadow-[0_0_60px_rgba(0,0,0,0.6)]`}
       >
         {/* left */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-2">
+        <header className={`flex flex-col justify-center md:w-full w-screen  ${isMobile ? 'p-6 pt-6' : 'p-20'}`}>
           <div className="flex flex-col gap-1">
             <h1 style={{fontSize: isMobile ? '1.5rem' : '3rem'}}  className="hero-header flex items-center gap-2">
               <span className='pb-4'>Shaping</span>
@@ -287,7 +288,7 @@ const Hero = () => {
 
         {/* right */}
         <figure>
-          <div className={`${isMobile?'p-2 pt-10':'p-24'}`}>
+          <div className={`${isMobile?'p-6 pt-10':'p-24'}`}>
             <HeroExperience />
           </div>
         </figure>

@@ -5,11 +5,12 @@ import Services from './sections/Services'
 import ExperienceSection from './sections/ExperienceSection'
 import TechStack from './sections/TechStack'
 import gsap from "gsap";
+import { useMediaQuery } from 'react-responsive'
 
 
 const App = () => {
 
-  const [isMobile,setIsMobile] = useState(window.innerWidth < 768);
+ const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
  const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -196,7 +197,7 @@ useEffect(() => {
 
   
 `}>
-        <p className='flex-1 text-white flex items-center justify-start cursor-pointer pl-15 md:pl-15 '
+        <p className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-6' : 'pl-15 '}`}
          onClick={() => smoothScrollTo(window.innerHeight * 0)}>
           <img src='/images/shtl-logo.png'    className={`${isMobile ? 'size-6' : 'size-12'}`}/>
           <span className={`${isMobile ? 'text-md' : 'text-2xl'} font-serif italic`}>SH TECH LABS</span></p>
