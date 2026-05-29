@@ -10,7 +10,7 @@ const HeroExperience = () => {
                 const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
     return (
-   <div className=' realtive w-[20vw] h-[50vh]  border-amber-50 object-contain overflow-hidden  rounded-2xl'>
+   <div className={`relative flex  items-center justify-center ${isMobile ? 'h-[30vh] w-[50vw]' : 'h-[50vh] w-[20vw]'}  border-amber-50 object-contain overflow-hidden  rounded-2xl`}>
        {/* <Room scale={2} position={[0, -3, 0]} /> */}
 
       <video
@@ -22,11 +22,11 @@ const HeroExperience = () => {
         >
           <source src="/images/hero.mp4" type="video/mp4" />
         </video>
-          <div className='
-    sticky inset-0 w-[20vw] h-[50vh]
+          {/* <div className={`
+    sticky inset-0  ${isMobile ? 'h-[30vh] w-[50vw]' : 'h-[50vh] w-[20vw]'}
     bg-black/40
     backdrop-blur-[0.4px]
-  ' />
+  `} /> */}
        </div> 
   
   )

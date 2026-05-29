@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import TechStack from './TechStack'
+import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger)
  const expCards=[
@@ -80,6 +81,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Services = () => {
   const [isFixed, setIsFixed] = useState(false)
   const ref1 = useRef(null)
+  const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
 
 
@@ -166,9 +168,9 @@ const Services = () => {
             0_-30px_120px_rgba(0,255,255,0.45),
             0_-10px_60px_rgba(255,255,255,0.25)]`}>
 
-      <section style={{position:isFixed ? "fixed" : "relative"}}
+    {  <section style={{position:isFixed ? "fixed" : "relative"}}
         className={`
-          h-[60vh] w-full rounded-t-4xl 
+          ${isMobile ? 'h-[60vh]' : 'h-[60vh]'} w-full rounded-t-4xl 
           flex items-center justify-center
           relative overflow-hidden
           transition-all duration-300
@@ -184,7 +186,7 @@ const Services = () => {
           muted
           playsInline
         >
-          <source src="/images/services.mp4" type="video/mp4" />
+          <source src={isMobile ? "/images/service-m.mp4" : "/images/service-w.mp4"} type="video/mp4" />
         </video>
           <div className="absolute inset-0">
     <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
@@ -220,7 +222,7 @@ const Services = () => {
         </div> */}
         
 
-      </section>
+      </section>}
 
       <div className="h-fit w-full relative z-22 overflow-y-auto no-scrollbar">
       {isFixed && <div style={{height:"60vh"}}/> }
@@ -236,7 +238,7 @@ const Services = () => {
               <div className='font-semibold md:text-5xl text-3xl text-center'>
                  <p>WE WORK ON</p>
               </div>
-              <div className='mt-32 relative'>
+              <div style={{width:"100%"}} className='mt-32 relative'>
               
                 <div className='relative z-50 xl:space-y-22 space-y-10'>
                 {expCards.map((card,index)=>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 
 
@@ -14,6 +15,7 @@ const AboutSection = () => {
   const [isFixed, setIsFixed] = useState(false)
   const ref = useRef(null)
     const [index, setIndex] = useState(0)
+    const isMobile= useMediaQuery({query:'(max-width:768px)'})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +49,7 @@ const AboutSection = () => {
 
       <section id='aboute'
         className={`
-          h-screen w-full bg-blue-200 text-black
+          h-screen w-full bg-[#f7d2af] text-black
           rounded-t-4xl
           flex items-center justify-center
           transition-all duration-300
@@ -79,9 +81,9 @@ const AboutSection = () => {
         </div>
         <div style={{textAlign:"right"}} className={`max-w-4xl  py-16 text-center space-y-6 z-16 ${!isFixed?"overflow-hidden":"overflow-y-auto"}  h-full no-scrollbar`}>
 
-          <h2 className="text-9xl font-bold italic px-6 z-18">Our Motive</h2>
+          <h2 className={`${isMobile ? 'text-6xl' : 'text-9xl'} font-bold italic px-6 z-18`}>Our Motive</h2>
 
-          <p style={{textAlign:"right"}}  className="text-3xl text-black font-semibold font-serif pl-[20vw] italic">
+          <p style={{textAlign:"right"}}  className={`${isMobile ? 'text-xl px-3 pb-12' : 'text-3xl'} text-black font-semibold font-serif pl-[20vw] italic`}>
           At SH Tech Labs, our motive is to bridge the critical gap between sophisticated technical architecture and tangible business growth. We operate with the firm conviction that software should never be a mere utility; it must be a powerful, competitive asset that drives efficiency, scalability, and long-term value.
 Our commitment to our clients is rooted in precision and high-impact engineering. By integrating rigorous agile methodologies with a "zero-bug" philosophy, we transform complex operational challenges into streamlined, secure, and intuitive digital ecosystems. We exist to empower visionary enterprises—from high-growth startups to established industry leaders—by providing the technical infrastructure required to dominate their markets.
 We don't just write code; we architect the future of your operations. 

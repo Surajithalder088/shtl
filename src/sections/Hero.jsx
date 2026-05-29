@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import HeroExperience from '../components/HeroExperience'
 import Bg from '../components/Bg'
@@ -236,7 +236,7 @@ export const PremiumBackground = () => (
 )
 
 const Hero = () => {
-
+ const [isMobile,setIsMobile] = useState(window.innerWidth < 768);
 
   return (
     <section id="hero" className="fixed overflow-hidden">
@@ -250,7 +250,7 @@ const Hero = () => {
         <Bg />
       </div>
 
-      <div
+      <div style={{flexDirection: isMobile ? 'column' : 'row'}}
         className="hero-layout
           border border-white/20
           m-15 rounded-2xl
@@ -261,7 +261,7 @@ const Hero = () => {
         {/* left */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-2">
           <div className="flex flex-col gap-1">
-            <h1 className="hero-header flex items-center gap-2">
+            <h1 style={{fontSize: isMobile ? '1.5rem' : '3rem'}}  className="hero-header flex items-center gap-2">
               <span className='pb-4'>Shaping</span>
               <span className="overflow-hidden h-full">
     
@@ -275,10 +275,10 @@ const Hero = () => {
                 Ideas
               </span>
             </h1>
-            <h1 className="hero-header">into Real Projects</h1>
-            <h1 className="hero-header">that Deliver Value</h1>
+            <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">into Real Projects</h1>
+            <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">that Deliver Value</h1>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p style={{width:"50vw"}} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
               hi, developing the future of digital infrastructure
             </p>
             <Button />
@@ -287,7 +287,7 @@ const Hero = () => {
 
         {/* right */}
         <figure>
-          <div className=" p-24">
+          <div className={`${isMobile?'p-2 pt-10':'p-24'}`}>
             <HeroExperience />
           </div>
         </figure>

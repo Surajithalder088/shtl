@@ -1,5 +1,6 @@
 import React from 'react'
 import Techicons from '../components/Models/Techicons'
+import { useMediaQuery } from 'react-responsive'
 
 const textStackIcone=[
    
@@ -11,6 +12,7 @@ const textStackIcone=[
 ]
 
 const TechStack = () => {
+   const isMobile= useMediaQuery({query:'(max-width:768px)'})
   return (
     <div className="flex-center section-padding bg-black relative">
         <div className='flex flex-col items-center gap-4 w-full h-full md:px-10 px-5'>
@@ -21,7 +23,7 @@ const TechStack = () => {
          <p>Technologies we use</p>
       </div>
 
-      <div className="text-grid flex items-center gap-2">
+      <div className={`text-grid flex items-center gap-2 ${isMobile ? 'flex-col' : 'flex-row'}`}>
         {textStackIcone.map((icon,index)=>(
             <div key={index} className="card-border tech-card overflow-hidden group md:rounded-full xl:rounded-lg rounded-lg">
                 {/* <div className="tech-card-animated-bg"/> */}
