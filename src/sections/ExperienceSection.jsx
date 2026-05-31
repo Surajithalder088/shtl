@@ -5,6 +5,8 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import TechStack from './TechStack'
+import HorizontalProjects from './HorizontalProjects'
+import WhyUs from './WhyUs'
 
 gsap.registerPlugin(ScrollTrigger)
  const expCards=[
@@ -143,7 +145,7 @@ const ExperienceSection = () => {
     background:"black"
   }}
     className='w-full md:pt-40 pt-20 h-[100vh] section-padding xl:px-0 rounded-t-4xl overflow-y-auto no-scrollbar'>
-   
+   <HorizontalProjects/>
     <div className='w-full h-full md:px-20 px-3'>
         <div className='flex flex-col items-center gap-4'>
       <div className='hero-badge'>
@@ -206,7 +208,7 @@ const ExperienceSection = () => {
     </div>
 
   
-          {/* <TechStack/> */}
+    <WhyUs/>
 
    </section>
   )

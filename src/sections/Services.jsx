@@ -8,6 +8,7 @@ import TechStack from './TechStack'
 import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger)
+
  const expCards=[
     {
         review:"End-to-end web application development using modern frameworks and battle-tested architectures. ",
@@ -42,17 +43,7 @@ gsap.registerPlugin(ScrollTrigger)
             "Semantic search implementation"
         ]
     },
-     {
-        review:"Production-grade APIs and system integrations built for performance and reliability.",
-        imgPath:"/images/api-icon.png",
-        title:"API Development & Integration",
-        date:"Node.js   Express   FastAPI   PostgreSQL   Redis   Docker",
-        responsibilities:[
-            "RESTful API design & development",
-            "API gateway & rate limiting",
-            "Third-party API integration"
-        ]
-    },
+
 
     {
         review:"Scalable multi-tenant SaaS platforms with billing, analytics, and enterprise-grade security.",
@@ -65,17 +56,7 @@ gsap.registerPlugin(ScrollTrigger)
             "Third-party API integration"
         ]
     },
-    {
-        review:"Pixel-perfect interfaces and design systems that scale across your product surface.",
-        imgPath:"/images/uiux-icon.png",
-        title:"UI/UX Engineering",
-        date:"React   TailwindCSS   Framer Motion   GSAP   Figma   TypeScript",
-        responsibilities:[
-            "Design system architecture",
-            "Animation & micro-interactions",
-            "Reusable component libraries"
-        ]
-    },
+   
    
 ]
 const Services = () => {
@@ -233,10 +214,13 @@ const Services = () => {
                 <div className='flex flex-col items-center gap-4'>
               
           <div className='hero-badge'>
-                <p>We provide services on these domain</p>
+                <p>WHAT WE BUILD</p>
               </div>
               <div className='font-semibold md:text-5xl text-3xl text-center'>
-                 <p>WE WORK ON</p>
+                 <p>Enterprise-grade services</p>
+              </div>
+              <div className='font-semibold md:text-5xl text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400'>
+                 <p>for modern teams</p>
               </div>
               <div style={{width:"100%"}} className='mt-32 relative'>
               
@@ -263,7 +247,7 @@ const Services = () => {
                            <img src={card.imgPath} alt={card.title} />
                         </div>
                         <div>
-                          <h1 className='font-semibold text-3xl'>{card.title}</h1>
+                          <h1 className='font-semibold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400'>{card.title}</h1>
                           <p className=' my-5 text-white-50'>
                             {card.date}
                           </p>

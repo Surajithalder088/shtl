@@ -6,6 +6,11 @@ import ExperienceSection from './sections/ExperienceSection'
 import TechStack from './sections/TechStack'
 import gsap from "gsap";
 import { useMediaQuery } from 'react-responsive'
+import Button from './components/Button'
+import WhyUs from './sections/WhyUs'
+import FaQ from './sections/FaQ'
+import StartProject from './sections/StartProject'
+import Footer from './sections/Footer'
 
 
 const App = () => {
@@ -212,6 +217,8 @@ useEffect(() => {
            onClick={() => smoothScrollTo(window.innerHeight * 2)}>Services</p>
           <p   className="cursor-pointer hover:opacity-70 transition"
            onClick={() => smoothScrollTo(window.innerHeight * 3)}>Connect</p>
+
+           <Button />
         </div>)}
       </div>
 
@@ -242,12 +249,11 @@ useEffect(() => {
          <div id='experience' className="relative z-15 bg-black">
          <div className="sticky top-0">
             <ExperienceSection />
+          <FaQ/>
+          <StartProject/>
+          <Footer/>
             
           </div>
-
-       
-     
-
       </div>
 
       
