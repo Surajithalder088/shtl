@@ -279,9 +279,11 @@ const isMobile= useMediaQuery({query:'(max-width:768px)'})
             <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">into Real Projects</h1>
             <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">that Deliver Value</h1>
 
+          { !isMobile && (
             <p style={{width:"50vw"}} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
               Premium software engineering consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
             </p>
+          )}
 
             <Button />
           </div>
