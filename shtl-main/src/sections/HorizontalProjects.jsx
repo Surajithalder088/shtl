@@ -86,9 +86,10 @@ const HorizontalProjects = () => {
 
         {/* Intro Card */}
         <div className="panel intro-panel">
-          <h1>Our Projects</h1>
-
-          <p>
+          <h1 className="text-4xl font-bold ">Our Projects</h1>
+          <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400"    >that deliver
+            real business outcomes</h3>
+          <p className="pt-5 text-gray-400">
             Explore our creative work, frontend
             interactions, animations, and modern
             UI experiences.

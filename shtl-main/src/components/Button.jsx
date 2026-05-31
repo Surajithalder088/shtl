@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Button = () => {
+  // const navigate = useNavigate();
+
   return (
-    <a
-      href="about"
-      className="relative group inline-flex w-fit items-center justify-center overflow-hidden rounded-xl p-[2px]"
+    <div onClick={() => alert("click")}
+      
+      className="relative z-999 group cursor-pointer inline-flex w-fit items-center justify-center overflow-hidden rounded-xl p-[2px]"
     >
       {/* Animated Border */}
       <span className="absolute inset-0 rounded-xl bg-[conic-gradient(from_0deg,transparent_0deg,white_60deg,transparent_120deg)] animate-spin-slow"></span>
@@ -15,7 +18,7 @@ const Button = () => {
           Start Project
         </p>
       </div>
-    </a>
+    </div>
   );
 };
 

@@ -7,6 +7,10 @@ import TechStack from './sections/TechStack'
 import gsap from "gsap";
 import { useMediaQuery } from 'react-responsive'
 import Button from './components/Button'
+import WhyUs from './sections/WhyUs'
+import FaQ from './sections/FaQ'
+import StartProject from './sections/StartProject'
+import Footer from './sections/Footer'
 
 
 const App = () => {
@@ -245,6 +249,9 @@ useEffect(() => {
          <div id='experience' className="relative z-15 bg-black">
          <div className="sticky top-0">
             <ExperienceSection />
+          <FaQ/>
+          <StartProject/>
+          <Footer/>
             
           </div>
       </div>

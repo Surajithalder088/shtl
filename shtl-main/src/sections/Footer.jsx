@@ -1,0 +1,153 @@
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useMediaQuery } from 'react-responsive';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Footer = () => {
+  const footerRef = useRef(null);
+  const isMobile= useMediaQuery({query:'(max-width:768px)'})
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Smooth fade up for the CTA banner elements
+      gsap.from(".animate-footer-cta", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top 85%",
+        }
+      });
+
+      // Subtle link column cascade
+      gsap.from(".animate-footer-cols", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".animate-footer-cols",
+          start: "top 90%",
+        }
+      });
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <footer ref={footerRef} className="bg-black text-white pt-20 pb-8 px-6 md:px-12 lg:px-24 border-t border-gray-900 font-sans">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* TOP ROW: Pre-Footer CTA Banner */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-16 border-b border-gray-900 gap-6">
+          <div className="space-y-2">
+            <h2 className="animate-footer-cta text-3xl md:text-4xl font-bold tracking-tight">
+              Ready to build something great?
+            </h2>
+            <p className="animate-footer-cta text-gray-400 text-sm md:text-base">
+              Let's discuss your next project. We typically respond within 24 hours.
+            </p>
+          </div>
+          
+          <button className="animate-footer-cta group flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-900/20 text-sm active:scale-[0.98]">
+            <span>Start a Project</span>
+            <span className="text-xs transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+          </button>
+        </div>
+
+        {/* MIDDLE ROW: Brand Info & Multi-Column Navigation */}
+        <div className="animate-footer-cols grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 py-16">
+          
+          {/* Brand Left Box */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="flex items-center space-x-3">
+              <p className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-1' : 'pl-0 '}`}
+         onClick={() => smoothScrollTo(window.innerHeight * 0)}>
+          <img src='/images/shtl-logo.png'    className={`${isMobile ? 'size-6' : 'size-12'}`}/>
+          <span className={`${isMobile ? 'text-md' : 'text-2xl'} font-serif italic`}>SH TECH LABS</span></p>
+             
+            </div>
+            
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Premium software engineering consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
+            </p>
+
+            {/* Social Icons Wrapped in Fine Round Borders */}
+            <div className="flex items-center space-x-3 pt-2">
+              {[
+                { label: 'f', href: '#' },
+                { label: '📷', href: '#' },
+                { label: '✕', href: '#' },
+                { label: '𝕏', href: '#' },
+                { label: '🐙', href: '#' },
+                { label: '💬', href: '#' },
+                { label: '✉', href: '#' }
+              ].map((social, idx) => (
+                <a 
+                  key={idx} 
+                  href={social.href}
+                  className="w-9 h-9 rounded-xl border border-gray-800 bg-[#070a12]/50 flex items-center justify-center text-xs text-gray-400 hover:text-white hover:border-gray-700 transition-colors"
+                >
+                  <span>{social.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Column 1: Services */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-sm font-bold tracking-wider text-white">Services</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              {["Full Stack Development", "SaaS Development", "AI-Powered Apps", "Cloud & DevOps", "UI/UX Engineering"].map((item, idx) => (
+                <li key={idx}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 2: Company */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-sm font-bold tracking-wider text-white">Company</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              {["About Us", "Portfolio", "Blog", "Admin Console", "Careers", "Contact"].map((item, idx) => (
+                <li key={idx}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Technologies */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-sm font-bold tracking-wider text-white">Technologies</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              {["Next.js & React", "TypeScript", "Node.js & FastAPI", "PostgreSQL & MongoDB", "Docker & AWS"].map((item, idx) => (
+                <li key={idx}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* BOTTOM ROW: Copyright & Legal Policies */}
+        <div className="pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+          <div>
+            © 2026 SH Tech Labs. All rights reserved.
+          </div>
+          <div className="flex items-center space-x-6">
+            <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-gray-300 transition-colors">Terms of Use</a>
+            <a href="#" className="hover:text-gray-300 transition-colors">Cookie Policy</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

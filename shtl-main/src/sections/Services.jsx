@@ -219,7 +219,7 @@ const Services = () => {
               <div className='font-semibold md:text-5xl text-3xl text-center'>
                  <p>Enterprise-grade services</p>
               </div>
-              <div className='font-semibold md:text-5xl text-3xl text-center'>
+              <div className='font-semibold md:text-5xl text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400'>
                  <p>for modern teams</p>
               </div>
               <div style={{width:"100%"}} className='mt-32 relative'>
@@ -247,7 +247,7 @@ const Services = () => {
                            <img src={card.imgPath} alt={card.title} />
                         </div>
                         <div>
-                          <h1 className='font-semibold text-3xl'>{card.title}</h1>
+                          <h1 className='font-semibold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400'>{card.title}</h1>
                           <p className=' my-5 text-white-50'>
                             {card.date}
                           </p>

@@ -272,7 +272,7 @@ const isMobile= useMediaQuery({query:'(max-width:768px)'})
           />
 
               </span>
-              <span className="overflow-hidden h-full">
+              <span className="overflow-hidden h-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
                 Ideas
               </span>
             </h1>
@@ -280,8 +280,9 @@ const isMobile= useMediaQuery({query:'(max-width:768px)'})
             <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">that Deliver Value</h1>
 
             <p style={{width:"50vw"}} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
-              hi, developing the future of digital infrastructure
+              Premium software engineering consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
             </p>
+
             <Button />
           </div>
         </header>

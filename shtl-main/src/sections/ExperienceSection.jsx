@@ -6,6 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import TechStack from './TechStack'
 import HorizontalProjects from './HorizontalProjects'
+import WhyUs from './WhyUs'
 
 gsap.registerPlugin(ScrollTrigger)
  const expCards=[
@@ -207,7 +208,7 @@ const ExperienceSection = () => {
     </div>
 
   
-          {/* <TechStack/> */}
+    <WhyUs/>
 
    </section>
   )
