@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from "framer-motion";
+
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -116,31 +118,56 @@ const WhyUs = () => {
     <section ref={sectionRef} className="bg-black py-24 px-6 md:px-12 min-h-screen">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
-          <div className="md:w-1/2">
-            <h4 className="text-blue-400 uppercase tracking-[0.2em] text-xs font-bold mb-4">
-              WHY SH TECH LABS
-            </h4>
-            <h2 className="text-white text-5xl md:text-6xl font-bold leading-tight">
-              Built for teams that <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                won't compromise
-              </span>
-            </h2>
-          </div>
-          <div className="md:w-1/3">
-            <p className="text-gray-400 text-lg leading-relaxed">
-              We've seen what happens when companies ship fast without thinking long-term. 
-              SH TECH LABS was built as the alternative — a place where engineering excellence 
-              isn't a differentiator, it's the baseline.
-            </p>
-          </div>
-        </div>
+       <div className="flex flex-col justify-between items-start gap-8 mb-20">
+             <motion.div
+               className="md:w-1/2"
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+               transition={{ duration: 0.5, ease: "easeOut" }}
+             >
+               <h4 className="text-blue-400 uppercase tracking-[0.2em] text-xs font-bold mb-4">
+                 WHY SH TECH LABS
+               </h4>
+           
+               <h2 className="text-white text-5xl md:text-6xl font-bold leading-tight">
+                 Built for teams that <br />
+                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+        won't compromise
+                 </span>
+               </h2>
+             </motion.div>
+           
+             <motion.div
+               className="md:w-1/3"
+               initial={{ opacity: 0, x: -50 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true, amount: 0.3 }}
+               transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+             >
+               <p className="text-gray-400 text-lg leading-relaxed">
+                 We've seen what happens when companies ship fast without thinking
+                 long-term. SH TECH LABS was built as the alternative — a place where
+                 engineering excellence isn't a differentiator, it's the baseline.
+               </p>
+             </motion.div>
+           </div>
 
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
+             <motion.div
+               key={index}
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true, amount: 0.2 }}
+               transition={{
+                 duration: 0.4,
+                 delay: index * 0.15,
+               }}
+             >
             <FeatureCard key={index} {...feature} />
+            </motion.div>
           ))}
           
         </div>

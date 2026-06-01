@@ -173,35 +173,6 @@ const Services = () => {
     <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/10" />
   </div>
-        
-
-        {/* 🔥 DARK OVERLAY <h1 className='absolute bottom-6 text-4xl font-semibold border-white-50
-    shadow-[0_-30px_80px_rgba(255,255,255,0.18),0_-10px_30px_rgba(255,255,255,0.12)]`
-        '>Major Services we provide</h1> */}
-        {/* <div className="absolute inset-0 bg-black/50" /> */}
-
-        {/* CONTENT */}
-        {/* <div className="absolute bottom-10 z-10 text-black text-center flex justify-around px-6 w-full">
-                <div className='flex justify-between items-center p-2 bg-white-50 rounded-2xl w-fit gap-3'>
-                    
-                    <img src='/images/debug.png' className='size-6'/>
-                    <p className='text-3xl font-semibold'>Testing</p>
-                    </div>
-
-
-                 <div className='flex justify-between items-center p-2 bg-white-50 rounded-2xl w-fit gap-3'>
-                    
-                    <img src='/images/seo.png' className='size-6'/>
-                    <p className='text-3xl font-semibold'>Seo</p>
-                    </div>
-                 <div className='flex justify-between items-center p-2 bg-white-50 rounded-2xl w-fit gap-3'>
-                    
-                    <img src='/images/support.png' className='size-6'/>
-                    <p className='text-3xl font-semibold'>Support</p>
-                    </div>
-
-        </div> */}
-        
 
       </section>}
 

@@ -138,11 +138,11 @@ const StartProject = () => {
 
           {/* Contact Details Footnote */}
           <div className="animate-left-item space-y-3 pt-4 border-t border-gray-900 text-sm text-gray-400">
-            <a href="mailto:contact@softqare.com" className="flex items-center space-x-3 hover:text-white transition-colors">
-              <span className="text-gray-500">✉</span> <span>contact@softqare.com</span>
+            <a href="mailto:shtlsolution@gmail.com" className="flex items-center space-x-3 hover:text-white transition-colors">
+              <span className="text-gray-500">✉</span> <span>shtlsolution@gmail.com</span>
             </a>
-            <a href="tel:+18801751073892" className="flex items-center space-x-3 hover:text-white transition-colors">
-              <span className="text-gray-500">📞</span> <span>+1 880-1751-073892</span>
+            <a href="tel:+917477685132" className="flex items-center space-x-3 hover:text-white transition-colors">
+              <span className="text-gray-500">📞</span> <span>+91 7477685132</span>
             </a>
             <div className="flex items-center space-x-3">
               <span className="text-gray-500">🌐</span> <span>Facebook</span>
@@ -200,9 +200,12 @@ const StartProject = () => {
                   className="w-full bg-[#111625] border border-gray-800 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-blue-500/50 transition-colors appearance-none"
                 >
                   <option value="">Select service</option>
-                  <option value="frontend">Frontend Architecture</option>
-                  <option value="backend">Backend & Infrastructure</option>
-                  <option value="fullstack">Fullstack Product Build</option>
+                  <option value="Bussiness Website">Bussiness Website</option>
+                  <option value="Fullstack App">Fullstack App(Web/Mobile)</option>
+                  <option value="AI-Powered Applications">AI-Powered Applications</option>
+                   <option value="SAAS Applications">SAAS Applications</option>
+                    <option value="Custom Software">Custom Software</option>
+                     <option value="Others">Others</option>
                 </select>
               </div>
               <div className="space-y-2">
