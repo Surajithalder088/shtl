@@ -276,7 +276,7 @@ const Hero = () => {
         className={`flex
           border border-white/20
           ${isMobile ? 'm-8' : 'm-15'} my-16 rounded-2xl
-          bg-white/5
+          bg-black/50
           backdrop-blur-[1px]
           shadow-[0_0_60px_rgba(0,0,0,0.6)]`}
       >

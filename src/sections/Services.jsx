@@ -10,52 +10,52 @@ import { useMediaQuery } from 'react-responsive'
 gsap.registerPlugin(ScrollTrigger)
 
  const expCards=[
+ {
+    review: "Professional websites that help businesses build a strong online presence, showcase their services, and turn visitors into customers.",
+    imgPath: "/images/web-icon.png",
+    title: "Business Website Development",
+    date: "Next.js  React  TypeScript  Tailwind CSS  Node.js",
+    responsibilities: [
+        "Build a professional online presence for your business",
+        "Showcase your services, products, and business information",
+        "Generate customer enquiries, calls, bookings, and leads"
+    ]
+},
+  {
+    review: "Custom web and mobile software built around your business processes, helping you automate operations, improve efficiency, and deliver better digital experiences.",
+    imgPath: "/images/app-icon.png",
+    title: "Custom Mobile & Web Software",
+    date: "React  Next.js  React Native  TypeScript  Node.js  FastAPI  PostgreSQL  Firebase",
+    responsibilities: [
+        "Build custom software tailored to your business needs",
+        "Develop web and mobile applications for customers and teams",
+        "Automate business processes and improve operational efficiency"
+    ]
+},
     {
-        review:"End-to-end web application development using modern frameworks and battle-tested architectures. ",
-        imgPath:"/images/web-icon.png",
-        title:"Full Stack Web Development",
-        date:"Next.js React TypeScript Node.js PostgreSQL Redis Docker",
-        responsibilities:[
-            "React & Next.js single-page applications",
-            "RESTful  API development & Server-side rendering",
-            "Database architecture & optimization"
-        ]
-    },
-     {
-        review:"Cross-platform mobile application development with high-performance native experiences for iOS and Android. ",
-        imgPath:"/images/app-icon.png",
-        title:" Mobile App Development",
-        date:"React Native  Expo  TypeScript  Node.js  FastAPI  PostgreSQL  Firebase  Redux  Docker",
-        responsibilities:[
-            "Cross-platform iOS & Android app development",
-            "App performance optimization & animations",
-            "App Store & Play Store deployment"
-        ]
-    },
-     {
-        review:"Intelligent applications powered by LLMs, RAG pipelines, and custom AI integrations. ",
-        imgPath:"/images/ai-icon.png",
-        title:"AI-Powered Applications",
-        date:"Python  FastAPI  LangChain  OpenAI  Pinecone  PostgreSQL  React",
-        responsibilities:[
-            "LLM integration (OpenAI, Anthropic, open-source)",
-            "FastAPI & Node.js backend development",
-            "Semantic search implementation"
-        ]
-    },
+    review: "AI-powered business solutions that automate tasks, enhance customer experiences, and help businesses work smarter and faster.",
+    imgPath: "/images/ai-icon.png",
+    title: "AI-Powered Applications",
+    date: "Python  FastAPI  LangChain  OpenAI  PostgreSQL  React",
+    responsibilities: [
+        "Build AI solutions tailored to specific business needs",
+        "Automate repetitive tasks and improve business workflows",
+        "Create intelligent search, assistants, and customer experiences"
+    ]
+},
 
 
     {
-        review:"Scalable multi-tenant SaaS platforms with billing, analytics, and enterprise-grade security.",
-        imgPath:"/images/saas-icon.png",
-        title:"SaaS Application Development",
-        date:"Next.js   React   Node.js   Stripe   Auth0   PostgreSQL   Redis",
-        responsibilities:[
-            "Multi-tenant architecture design",
-            "Usage analytics & dashboards",
-            "Third-party API integration"
-        ]
-    },
+    review: "Custom management software that brings your business operations, data, and daily workflows together in one centralized platform.",
+    imgPath: "/images/saas-icon.png",
+    title: "Business Management Software",
+    date: "Next.js  React  TypeScript  Node.js  PostgreSQL  Redis  Docker",
+    responsibilities: [
+        "Admin panels and dashboards for complete business control",
+        "Manage customers, staff, orders, inventory, and daily operations",
+        "Real-time reports, analytics, and business performance insights"
+    ]
+},
    
    
 ]
@@ -219,9 +219,7 @@ const Services = () => {
                         </div>
                         <div>
                           <h1 className='font-semibold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400'>{card.title}</h1>
-                          <p className=' my-5 text-white-50'>
-                            {card.date}
-                          </p>
+                         
                           <p className="text-[#839cb5] italic">
                             Key Capabilities
                           </p>

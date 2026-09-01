@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* TOP ROW: Pre-Footer CTA Banner */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-16 border-b border-gray-900 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-10 border-b border-gray-900 gap-6">
           <div className="space-y-2">
             <h2 className="animate-footer-cta text-3xl md:text-4xl font-bold tracking-tight">
               Ready to build something great?
@@ -56,10 +56,14 @@ const Footer = () => {
             </p>
           </div>
           
-          <button className="animate-footer-cta group flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-900/20 text-sm active:scale-[0.98]">
-            <span>Start a Project</span>
-            <span className="text-xs transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-          </button>
+          <div>
+            <img src='/images/amar-best-img.jpeg'
+           className="animate-footer-cta object-cover mb-4"
+            style={{height:isMobile?'100px':'180px',width:isMobile?'100px':'150px',}}
+            />
+            <p className="text-white font-semibold">Mr. Surajit Halder </p>
+            <p className="text-gray-400 text-sm">Founder & CEO</p>
+          </div>
         </div>
 
         {/* MIDDLE ROW: Brand Info & Multi-Column Navigation */}

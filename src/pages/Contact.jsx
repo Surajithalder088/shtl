@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Footer from '../sections/Footer'
 import FaQ from '../sections/FaQ'
 import Button from '../components/Button'
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+
+
+
 
 const Contact = () => {
    const isMobile= useMediaQuery({query:'(max-width:768px)'})
+   const location = useLocation();
+   const currentPath = location.pathname;
+       const[headerMenuOpen,setHeaderMenuOpen]=useState(false)
   return (
     <div className='relative'>
-       <div className={`
-  flex items-center justify-between ${isMobile ? 'py-3' : 'p-1'}
+          <div className={`
+  flex flex-col ${isMobile ? 'py-3' : 'p-1'}
   fixed top-0 w-[100vw] z-90 fit-content 
 
   backdrop-blur-xl
@@ -18,25 +25,53 @@ const Contact = () => {
 
   
 `}>
-        <a className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-6' : 'pl-15 '}`}
-         href='/'> 
+      <div className='flex items-center justify-between w-full '> 
+         <a className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-6' : 'pl-15 '}`}
+         href='/'>
           <img src='/images/shtl-logo.png'    className={`${isMobile ? 'size-6' : 'size-12'}`}/>
           <span className={`${isMobile ? 'text-md' : 'text-2xl'} font-serif italic`}>SH TECH LABS</span></a>
 
 
-       {!isMobile && (
+       {!isMobile ? (
         <div className='flex items-center justify-around gap-2 w-1/2'>
           <a   className="cursor-pointer hover:opacity-70 transition"
            href='/about' 
        >About</a>
           <a   className="cursor-pointer hover:opacity-70 transition"
            href='/services'>Services</a>
-          <a   className="cursor-pointer hover:opacity-70 transition"
+          <a  style={{borderBottom: currentPath === '/contact' ? '1px solid grey' : 'none'}}
+           className="cursor-pointer hover:opacity-70 transition"
            href='/contact'>Connect</a>
 
            <Button />
-        </div>)}
-      </div>
+        </div>):
+        <div className='flex items-center justify-end gap-2 w-1/2 pr-8'>
+          <p className="cursor-pointer hover:opacity-70 transition text-white font-semibold p-0"
+          onClick={() => setHeaderMenuOpen(!headerMenuOpen)}>{headerMenuOpen ? 'X' : <img src='/images/main-menu.png' className='size-4' />}</p>
+        </div>
+        }</div>
+
+       {headerMenuOpen && (
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-around',padding:'5px 0px',borderTop:"0.3px solid #262626"}}
+        classnamwe='flex items-center justify-around w-[100vw] gap-2  transition-smooth duration-300 ease-in-out '>
+          <a   className="cursor-pointer hover:opacity-70 transition text-sm"
+           href='/about' 
+       >About</a>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/services'>Services</a>
+          <a style={{borderBottom: currentPath === '/contact' ? '1px solid grey' : 'none'}} 
+           className="cursor-pointer hover:opacity-70 transition"
+           href='/contact'>Connect</a>
+
+      
+      
+        </div>
+       )}
+
+
+      </div>    
+
+  
       <section className="bg-black py-24 px-6 md:px-12 min-h-screen">
   <div className="max-w-7xl mx-auto py-10">
 
