@@ -264,7 +264,8 @@ const Hero = () => {
         muted
         playsInline
       >
-        <source src="/images/hero-bg-vid.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dbxx49ers/video/upload/v1788252058/hero-bg-vid_c2sxjp.mp4"
+         type="video/mp4" />
       </video>
 
 

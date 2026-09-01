@@ -93,7 +93,9 @@ const BookAppoinment = () => {
           muted
           playsInline
         >
-          <source src={isMobile ? "/images/service-m.mp4" : "/images/service-w.mp4"} type="video/mp4" />
+          <source src={isMobile ? "https://res.cloudinary.com/dbxx49ers/video/upload/v1788252057/service-m_wombzg.mp4" :
+           "https://res.cloudinary.com/dbxx49ers/video/upload/v1788252057/service-w_s9kvey.mp4"} 
+          type="video/mp4" />
         </video>
           <div className="absolute inset-0">
     <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-black/80 via-black/40 to-transparent" />

@@ -20,7 +20,8 @@ const HeroExperience = () => {
           muted
           playsInline
         >
-          <source src="/images/hero.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dbxx49ers/video/upload/v1788252057/hero_kezcim.mp4"
+           type="video/mp4" />
         </video>
           {/* <div className={`
     sticky inset-0  ${isMobile ? 'h-[30vh] w-[50vw]' : 'h-[50vh] w-[20vw]'}
