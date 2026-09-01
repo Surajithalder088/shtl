@@ -134,11 +134,11 @@ const sliderSettings = {
                   className="card-border tech-card overflow-hidden group md:rounded-full xl:rounded-lg rounded-lg min-w-[280px]"
                 >
                   <div className="tech-card-content">
-                    <div className="h-40 flex items-center justify-center">
+                    <div className="h-20 flex items-center justify-center">
                       <img
                         src={icon.image}
                         alt={icon.name}
-                        className="w-24 h-24 object-contain animate-float"
+                        className="w-14 h-14 object-contain animate-float"
                       />
                     </div>
           

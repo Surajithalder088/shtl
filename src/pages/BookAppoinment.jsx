@@ -14,30 +14,30 @@ const BookAppoinment = () => {
   return (
    <>
    <div className='relative'>
-        <div className={`
+          <div className={`
   flex items-center justify-between ${isMobile ? 'py-3' : 'p-1'}
-  fixed top-0 w-[100vw] z-50 fit-content 
+  fixed top-0 w-[100vw] z-90 fit-content 
 
   backdrop-blur-xl
   bg-gradient-to-b from-black/70 via-black/40 to-transparent
 
   
 `}>
-        <p className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-6' : 'pl-15 '}`}
-         onClick={() => navigate("/")}>
+        <a className={`flex-1 text-white flex items-center justify-start cursor-pointer ${isMobile ? 'pl-6' : 'pl-15 '}`}
+         href='/'> 
           <img src='/images/shtl-logo.png'    className={`${isMobile ? 'size-6' : 'size-12'}`}/>
-          <span className={`${isMobile ? 'text-md' : 'text-2xl'} font-serif italic`}>SH TECH LABS</span></p>
+          <span className={`${isMobile ? 'text-md' : 'text-2xl'} font-serif italic`}>SH TECH LABS</span></a>
 
 
        {!isMobile && (
         <div className='flex items-center justify-around gap-2 w-1/2'>
-          <p    className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 1)}
-       >About</p>
-          <p   className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 2)}>Services</p>
-          <p   className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 3)}>Connect</p>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/about' 
+       >About</a>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/services'>Services</a>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/contact'>Connect</a>
 
            <Button />
         </div>)}

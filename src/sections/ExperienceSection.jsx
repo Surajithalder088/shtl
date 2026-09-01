@@ -144,7 +144,8 @@ const ExperienceSection = () => {
    // background: 'radial-gradient(ellipse 120% 80% at 50% 10%, #07122b 0%, #020812 55%, #000000 100%)',
     background:"black"
   }}
-    className='w-full md:pt-40 pt-20 h-[100vh] section-padding xl:px-0 rounded-t-4xl overflow-y-auto no-scrollbar'>
+    className='w-full md:pt-20 pt-10 h-[100vh] section-padding xl:px-0 rounded-t-4xl overflow-y-auto no-scrollbar'>
+   
    <HorizontalProjects/>
     <div className='w-full h-full md:px-20 px-3'>
         <div className='flex flex-col items-center gap-4'>
@@ -208,7 +209,7 @@ const ExperienceSection = () => {
     </div>
 
   
-    <WhyUs/>
+   
 
    </section>
   )

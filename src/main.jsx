@@ -6,13 +6,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookAppoinment from './pages/BookAppoinment.jsx';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Services from './pages/Services.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/start" element={<BookAppoinment />} />
+      <Route path="/about" element={<About />} />
+       <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/start" element={<BookAppoinment />} />
     </Routes>
     
     </BrowserRouter>

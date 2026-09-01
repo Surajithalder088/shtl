@@ -82,20 +82,30 @@ const Footer = () => {
             {/* Social Icons Wrapped in Fine Round Borders */}
             <div className="flex items-center space-x-3 pt-2">
               {[
-                { label: 'f', href: '#' },
-                { label: '📷', href: '#' },
-                { label: '✕', href: '#' },
-                { label: '𝕏', href: '#' },
-                { label: '🐙', href: '#' },
-                { label: '💬', href: '#' },
-                { label: '✉', href: '#' }
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToKDAEZ2Ydvo9JpK8sABjeBARpbiEbwhy2An3cPaeStQ&s=10',
+                   href: 'https://www.facebook.com/share/18KyUVrbTr/' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxfwaKUG9LpXDzwkL3334GlAOiiBC0cLwLDIVpI38Rg&s=10',
+                   href: 'https://www.instagram.com/shtechlabs?utm_source=qr&igsi=MTdycDFycTFkMHhlbw==' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8yFIH_CSizLJ31r2OLenaoFYAs7cnUnmoEgxTx621OQ&s=10',
+                   href: 'https://www.linkedin.com/company/shtechlabs' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-KQUtAHY0_kl_WL-ZIzsy4jMvBX8SwWlSPhm0p6m1KA&s=10',
+                   href: 'https://x.com/SHTECHLABS' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd43NPXZcOp-N1vst9Acu-2IV7ZqJ3zQiOJpoW5YOOyg&s=10', 
+                  href: 'https://github.com/shtechlabs' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnAcE2jn33Lqf2fteJ00cS_p19c8dv-nGRQzJWwn7YBg&s=10', 
+                  href: 'https://wa.me/7477685132' },
+                { label: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTylaM0VeUireMmaKEj03-6ibpFiylCcgQlNUuyKCuaQ&s=10',
+                   href: 'https://mail.google.com/mail/?view=cm&fs=1&to=shtlsolution@gmail.com' }
               ].map((social, idx) => (
                 <a 
                   key={idx} 
                   href={social.href}
-                  className="w-9 h-9 rounded-xl border border-gray-800 bg-[#070a12]/50 flex items-center justify-center text-xs text-gray-400 hover:text-white hover:border-gray-700 transition-colors"
+                  className="w-9 h-9 rounded-xl border border-slate-600  flex items-center justify-center text-xs text-gray-400 hover:text-white hover:border-gray-700 transition-colors"
                 >
-                  <span>{social.label}</span>
+                  <span className="flex items-center justify-center ">
+                    <img src={social.label} alt={idx} 
+                  className='h-full w-full fit-contain rounded-xl'/>
+                   </span>
                 </a>
               ))}
             </div>
@@ -136,7 +146,7 @@ const Footer = () => {
         {/* BOTTOM ROW: Copyright & Legal Policies */}
         <div className="pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <div>
-            © 2026 SH Tech Labs. All rights reserved.
+            © 2026 SH TECH LABS. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>

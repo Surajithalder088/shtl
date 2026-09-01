@@ -1,15 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../components/Button'
 import HeroExperience from '../components/HeroExperience'
 import Bg from '../components/Bg'
 import PhoneExperience from '../components/PhoneExperience'
 import { useMediaQuery } from 'react-responsive'
+import { motion, AnimatePresence } from "framer-motion";
 
-const words = [
-  { test: 'Ideas', imgPath: '/images/ideas.png' },
-  { test: 'Concepts', imgPath: '/images/concept.png' },
-  { test: 'Visions', imgPath: '/images/vision.png' },
-]
+
 
 /* ─── Premium Background Layer ──────────────────────────────────────────────
    Sits at z-0, behind <Bg /> (z-[1]) and the glass card (z-[1])
@@ -29,8 +26,8 @@ export const PremiumBackground = () => (
       style={{
         position: 'absolute',
         inset: 0,
-      background:
-  'radial-gradient(ellipse at top, #00f0ff44 0%, #08171b 28%, #020202 60%, #000000 100%)'
+        background:
+          'radial-gradient(ellipse at top, #00f0ff44 0%, #08171b 28%, #020202 60%, #000000 100%)'
       }}
     />
 
@@ -86,7 +83,7 @@ export const PremiumBackground = () => (
             <line
               key={`v${i}`}
               x1={vx} y1="180"
-              x2={x}   y2="900"
+              x2={x} y2="900"
               stroke="#3b82f6"
               strokeWidth={i % 4 === 0 ? '0.7' : '0.3'}
               opacity={i % 4 === 0 ? 0.45 : 0.18}
@@ -237,66 +234,102 @@ export const PremiumBackground = () => (
 )
 
 const Hero = () => {
-const isMobile= useMediaQuery({query:'(max-width:768px)'})
+  const isMobile = useMediaQuery({ query: '(max-width:768px)' })
+
+
+  const words = [
+    "Businesses","Restaurants","Clinics","Schools",
+    "Startups"
+  ];
+
+  const [currentWord, setCurrentWord] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWord((prev) => (prev + 1) % words.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="hero" className="fixed overflow-hidden">
-  
+
 
       {/* ── Premium BG: grid + orbs ── */}
-      <PremiumBackground />
+      <video
+        className="absolute inset-0 w-[100vw] h-[100vh] object-cover -z-10"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/images/hero-bg-vid.mp4" type="video/mp4" />
+      </video>
+
 
       {/* ── Original Bg 3D model ── */}
-      <div className="absolute inset-0 z-[1] h-full">
-        <Bg />
-      </div>
 
-      <div style={{flexDirection: isMobile ? 'column ' : 'row '}}
-        className={`hero-layout
+
+
+      <div style={{ flexDirection: isMobile ? 'column ' : 'row ' }}
+        className={`flex
           border border-white/20
-          ${isMobile?'m-8':'m-15'} my-16 rounded-2xl
+          ${isMobile ? 'm-8' : 'm-15'} my-16 rounded-2xl
           bg-white/5
-          backdrop-blur-sm
+          backdrop-blur-[1px]
           shadow-[0_0_60px_rgba(0,0,0,0.6)]`}
       >
+
         {/* left */}
         <header className={`flex flex-col justify-center md:w-full w-screen  ${isMobile ? 'p-6 pt-6' : 'p-20'}`}>
           <div className="flex flex-col gap-1">
-            <h1 style={{fontSize: isMobile ? '1.5rem' : '3rem'}}  className="hero-header flex items-center gap-2">
-              <span className='pb-4'>Shaping</span>
-              <span className="overflow-hidden h-full">
-    
-          <img
-            src={'/images/ideas.png'}
-            className='size-8 bg-white p-1 rounded-full'
-          />
+            <h1
+              style={{ fontSize: isMobile ? "1.5rem" : "3rem" }}
+              className="hero-header flex items-center gap-2"
+            >
+              <span className="pb-4">Helping</span>
 
-              </span>
-              <span className="overflow-hidden h-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                Ideas
+              <span className="overflow-hidden inline-block">
+                <span
+                  key={currentWord}
+                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400"
+                  style={{
+                    animation: "swapWord 0.5s ease-in-out",
+                  }}
+                >
+                  {words[currentWord]}
+                </span>
               </span>
             </h1>
-            <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">into Real Projects</h1>
-            <h1 style={{fontSize: isMobile ? '1.25rem' : '2.25rem'}} className="hero-header">that Deliver Value</h1>
 
-          { !isMobile && (
-            <p style={{width:"50vw"}} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
-              Premium software engineering consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
-            </p>
-          )}
+            <h1
+              style={{ fontSize: isMobile ? "1.25rem" : "2.25rem" }}
+              className="hero-header"
+            >
+              grow through our
+            </h1>
+            <h1 style={{ fontSize: isMobile ? '1.25rem' : '2.25rem' }} className="hero-header"> digital solutions</h1>
 
-            <Button />
+            {!isMobile && (
+              <p style={{ width: "50vw" }} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
+               We provide premium software consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
+              </p>
+            )}
+
+            <div className="z-4"><Button /></div>
           </div>
         </header>
 
         {/* right */}
-        <figure>
-          <div className={`${isMobile?'p-6 pt-10':'p-24'}`}>
-            <HeroExperience />
-          </div>
-        </figure>
 
-        
+        <div className={`${isMobile ? 'p-6 pt-10' : 'p-24'} rounded-2xl`}>
+
+          <HeroExperience />
+        </div>
+
+
+
       </div>
     </section>
   )

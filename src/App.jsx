@@ -210,13 +210,13 @@ useEffect(() => {
 
        {!isMobile && (
         <div className='flex items-center justify-around gap-2 w-1/2'>
-          <p    className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 1)}
-       >About</p>
-          <p   className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 2)}>Services</p>
-          <p   className="cursor-pointer hover:opacity-70 transition"
-           onClick={() => smoothScrollTo(window.innerHeight * 3)}>Connect</p>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/about' 
+       >About</a>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/services'>Services</a>
+          <a   className="cursor-pointer hover:opacity-70 transition"
+           href='/contact'>Connect</a>
 
            <Button />
         </div>)}
@@ -249,6 +249,7 @@ useEffect(() => {
          <div id='experience' className="relative z-15 bg-black">
          <div className="sticky top-0">
             <ExperienceSection />
+             <WhyUs/>
           <FaQ/>
           <StartProject/>
           <Footer/>

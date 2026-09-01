@@ -82,7 +82,9 @@ const HorizontalProjects = () => {
 
   return (
     <section className="horizontal-section" ref={sectionRef}>
+      
       <div className="horizontal-track" ref={trackRef}>
+        
 
         {/* Intro Card */}
         <div className="panel intro-panel">

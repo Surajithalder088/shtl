@@ -181,7 +181,7 @@ useEffect(() => {
                   </div>
 
           <p className="text-gray-600">
-            This section becomes fixed when it reaches the top.
+            
           </p>
 
         </div>
