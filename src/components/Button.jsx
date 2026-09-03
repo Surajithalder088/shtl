@@ -5,7 +5,7 @@ const Button = () => {
   const navigate = useNavigate();
 
   return (
-    <div onClick={() => navigate("/start")}
+    <div onClick={() => navigate("/start-project")}
       
       className="relative z-999 group cursor-pointer inline-flex w-fit items-center justify-center overflow-hidden rounded-xl p-[2px]"
     >

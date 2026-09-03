@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Services from './pages/Services.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import Projects from './pages/Projects.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,8 +18,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
        <Route path="/services" element={<Services />} />
+       <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/start" element={<BookAppoinment />} />
+        <Route path="/start-project" element={<BookAppoinment />} />
     </Routes>
     
     </BrowserRouter>

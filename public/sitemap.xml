@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://shtltechlabs.in/</loc>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://shtltechlabs.in/services</loc>
+  </url>
+
+  <!-- Portfolio -->
+  
+
+  <!-- About -->
+  <url>
+    <loc>https://shtltechlabs.in/about</loc>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://shtltechlabs.in/contact</loc>
+  </url>
+
+    <url>
+    <loc>https://shtltechlabs.in/projects</loc>
+  </url>
+
+  <!-- Start Project -->
+  <url>
+    <loc>https://shtltechlabs.in/start-project</loc>
+  </url>
+  </url>
+
+</urlset>

@@ -253,7 +253,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="fixed overflow-hidden">
+    <section id="hero" className="fixed h-[100vh] overflow-hidden ">
 
 
       {/* ── Premium BG: grid + orbs ── */}
@@ -305,20 +305,20 @@ const Hero = () => {
             </h1>
 
             <h1
-              style={{ fontSize: isMobile ? "1.25rem" : "2.25rem" }}
+              style={{ fontSize: isMobile ? "1.5rem" : "3rem" }}
               className="hero-header"
             >
               grow through our
             </h1>
-            <h1 style={{ fontSize: isMobile ? '1.25rem' : '2.25rem' }} className="hero-header"> digital solutions</h1>
+            <h1 style={{ fontSize: isMobile ? '1.5rem' : '3rem' }} className="hero-header"> digital solutions</h1>
 
             {!isMobile && (
-              <p style={{ width: "50vw" }} className="text-white-50 md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
+              <p style={{ width: "50vw" }} className="text-white-50 md:text-2xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
                We provide premium software consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
               </p>
             )}
 
-            <div className="z-4"><Button /></div>
+        
           </div>
         </header>
 
