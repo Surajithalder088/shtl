@@ -5,6 +5,7 @@ import Bg from '../components/Bg'
 import PhoneExperience from '../components/PhoneExperience'
 import { useMediaQuery } from 'react-responsive'
 import { motion, AnimatePresence } from "framer-motion";
+import Handwriting from '../components/Handwriting'
 
 
 
@@ -330,8 +331,13 @@ const Hero = () => {
         </div>
 
 
-
+<div style={{zIndex:999999}}
+      className='absolute -bottom-10 left-0 w-full flex justify-center z-50'>
+        <Handwriting/>
       </div>
+      </div>
+
+      
     </section>
   )
 }
