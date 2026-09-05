@@ -82,6 +82,9 @@ const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Premium software engineering consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
             </p>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                Govt. Reg. No:UDYAM-WB-10-0223251
+              </p>
 
             {/* Social Icons Wrapped in Fine Round Borders */}
             <div className="flex items-center space-x-3 pt-2">
