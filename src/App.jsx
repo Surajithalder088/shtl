@@ -145,8 +145,8 @@ const App = () => {
 
   return (
     <>{
-      isLoading ? (
-        <section
+      isLoading &&
+       ( <section
           style={{
             height: "100vh",
             width: "100%",
@@ -158,7 +158,7 @@ const App = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            zIndex: 9999,
+            zIndex:9999999,
             overflow: "hidden",
           }}
         >
@@ -237,9 +237,9 @@ const App = () => {
               </div>
             </div>
           </div>
-        </section>
-      ) :
-        (<div style={{ position: 'relative' }}>
+        </section>)
+      } 
+        <div style={{ position: 'relative' }}>
 
 
 
@@ -306,7 +306,7 @@ const App = () => {
 
          <div onClick={() => setHeroModal(true)}
          className='bg-white rounded-full p-0'
-         style={{position:"fixed",bottom:"140px",right:"20px",zIndex:9999999,display:heroModal?"none":"flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}>
+         style={{position:"fixed",bottom:"140px",right:"20px",zIndex:99999,display:heroModal?"none":"flex",alignItems:"center",justifyContent:"center",cursor:"pointer"}}>
         
           <img alt="calling"
           src='/images/phone-call.png'
@@ -315,7 +315,7 @@ const App = () => {
          </div>
 
            <div 
-         style={{position:"fixed",bottom:"60px",right:"20px",zIndex:9999999,display:heroModal?"none":"flex",alignItems:"center",justifyContent:"center",gap:"10px",cursor:"pointer"}}>
+         style={{position:"fixed",bottom:"60px",right:"20px",zIndex:99999,display:heroModal?"none":"flex",alignItems:"center",justifyContent:"center",gap:"10px",cursor:"pointer"}}>
         <a href='https://wa.me/7477685132'><img alt="calling"
           src='/images/whatsapp.png'
           className='size-10 relative'
@@ -357,9 +357,9 @@ const App = () => {
           </div>
 
 
-        </div>)
+        </div>
 
-    } </>
+   </>
   )
 }
 
