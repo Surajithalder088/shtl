@@ -4,35 +4,33 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://shtltechlabs.in/</loc>
+    <loc>https://shtechlabs.in/</loc>
   </url>
-
-  <!-- Services -->
-  <url>
-    <loc>https://shtltechlabs.in/services</loc>
-  </url>
-
-  <!-- Portfolio -->
-  
+ 
 
   <!-- About -->
   <url>
-    <loc>https://shtltechlabs.in/about</loc>
+    <loc>https://shtechlabs.in/about</loc>
   </url>
+  <!-- Services -->
+  <url>
+    <loc>https://shtechlabs.in/services</loc>
+  </url>
+
 
   <!-- Contact -->
   <url>
-    <loc>https://shtltechlabs.in/contact</loc>
+    <loc>https://shtechlabs.in/contact</loc>
   </url>
 
     <url>
-    <loc>https://shtltechlabs.in/projects</loc>
+    <loc>https://shtechlabs.in/projects</loc>
   </url>
 
   <!-- Start Project -->
   <url>
-    <loc>https://shtltechlabs.in/start-project</loc>
+    <loc>https://shtechlabs.in/start-project</loc>
   </url>
-  </url>
+  
 
 </urlset>
