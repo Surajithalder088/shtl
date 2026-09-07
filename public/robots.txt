@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shtltechlabs.in/sitemap.xml
+Sitemap: https://shtechlabs.in/sitemap.xml
