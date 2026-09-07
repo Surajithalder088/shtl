@@ -44,7 +44,8 @@ const Header = () => {
 
            <Button />
         </div>):
-        <div className='flex items-center justify-end gap-2 w-1/2 pr-8'>
+        <div className='flex items-center justify-end gap-2 w-1/2 pr-4'>
+           <Button />
           <p className="cursor-pointer hover:opacity-70 transition text-white font-semibold p-0"
           onClick={() => setHeaderMenuOpen(!headerMenuOpen)}>{headerMenuOpen ? 'X' : <img src='/images/main-menu.png' className='size-4' />}</p>
         </div>

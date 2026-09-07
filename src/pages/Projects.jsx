@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Button from '../components/Button'
 import WhyUs from '../sections/WhyUs'
@@ -10,6 +10,32 @@ import Header from '../components/Header'
 import ProjectList from '../sections/ProjectList'
 
 const Projects = () => {
+  useEffect(() => {
+  document.title = "Projects | SH TECH LABS";
+
+  const description =
+    "Explore projects and digital solutions developed by SH TECH LABS for businesses across different industries.";
+
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute("href", "https://shtechlabs.in/projects");
+}, []);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Footer from '../sections/Footer'
 import FaQ from '../sections/FaQ'
@@ -11,6 +11,32 @@ import Header from '../components/Header'
 
 
 const Contact = () => {
+  useEffect(() => {
+  document.title = "Contact SH TECH LABS | Get in Touch";
+
+  const description =
+    "Contact SH TECH LABS for Business website development, Custom applications , software solutions, redesign, maintenance and digital projects.";
+
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute("href", "https://shtechlabs.in/contact");
+}, []);
    const isMobile= useMediaQuery({query:'(max-width:768px)'})
    const location = useLocation();
    const currentPath = location.pathname;

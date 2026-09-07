@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Button from '../components/Button'
 import WhyUs from '../sections/WhyUs'
@@ -13,6 +13,34 @@ import Header from '../components/Header'
 
 
 const BookAppoinment = () => {
+
+  //for seo
+  useEffect(() => {
+  document.title = "Start a Project | SH TECH LABS";
+
+  const description =
+    "Start your website or software project with SH TECH LABS. Discuss your requirements and get a project consultation.";
+
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute("href", "https://shtechlabs.in/start-project");
+}, []);
      const isMobile= useMediaQuery({query:'(max-width:768px)'})
     const navigate = useNavigate();
         const[headerMenuOpen,setHeaderMenuOpen]=useState(false)

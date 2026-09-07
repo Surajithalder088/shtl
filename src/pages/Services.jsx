@@ -70,6 +70,33 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Services = () => {
+// for seo
+  useEffect(() => {
+  document.title = "Services | SH TECH LABS";
+
+  const description =
+    "Explore SH TECH LABS services including business website development, web applications,AI powered applications,Custom Mobile & Web Software, website redesign, maintenance and digital solutions.";
+
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute("href", "https://shtechlabs.in/services");
+}, []);
     const [isFixed, setIsFixed] = useState(false)
     const ref1 = useRef(null)
     const location = useLocation();

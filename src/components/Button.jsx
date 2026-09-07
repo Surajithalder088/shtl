@@ -14,7 +14,7 @@ const Button = () => {
 
       {/* Main Button */}
       <div className="relative z-10 rounded-xl bg-black px-6 py-3 transition-all duration-300 group-hover:bg-zinc-900">
-        <p className="text-white text-sm md:text-base font-medium tracking-wide">
+        <p className="text-white text-[10px] md:text-base font-medium tracking-wide">
           Start Project
         </p>
       </div>

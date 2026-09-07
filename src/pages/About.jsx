@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Button from '../components/Button'
 import Footer from '../sections/Footer.jsx'
@@ -13,6 +13,33 @@ import Header from '../components/Header.jsx'
 
 
 const About = () => {
+  //for seo
+  useEffect(() => {
+  document.title = "About SH TECH LABS | Developing The Future Of Digital Infrastructure";
+
+  const description =
+    "Learn about SH TECH LABS, a software and digital solutions agency helping businesses build modern websites and software solutions.";
+
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute("href", "https://shtechlabs.in/about");
+}, []);
    const isMobile= useMediaQuery({query:'(max-width:768px)'})
     const[headerMenuOpen,setHeaderMenuOpen]=useState(false)
     const location = useLocation();

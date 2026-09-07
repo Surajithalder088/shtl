@@ -286,11 +286,17 @@ const Hero = () => {
         {/* left */}
         <header className={`flex flex-col justify-center md:w-full w-screen  ${isMobile ? 'p-6 pt-6' : 'p-20'}`}>
           <div className="flex flex-col gap-1">
-            <h1
+           <h1
               style={{ fontSize: isMobile ? "1.5rem" : "3rem" }}
+              className="hero-header"
+            >
+              SH TECH LABS
+            </h1>
+            <h1
+              style={{ fontSize: isMobile ? "1rem" : "2rem" }}
               className="hero-header flex items-center gap-2"
             >
-              <span className="pb-4">Helping</span>
+              <span className="pb-2">helps</span>
 
               <span className="overflow-hidden inline-block">
                 <span
@@ -306,18 +312,18 @@ const Hero = () => {
             </h1>
 
             <h1
-              style={{ fontSize: isMobile ? "1.5rem" : "3rem" }}
+              style={{ fontSize: isMobile ? "1rem" : "2rem" }}
               className="hero-header"
             >
               grow through our
             </h1>
-            <h1 style={{ fontSize: isMobile ? '1.5rem' : '3rem' }} className="hero-header"> digital solutions</h1>
+            <h1 style={{ fontSize: isMobile ? '1rem' : '2rem' }} className="hero-header"> digital solutions</h1>
 
-            {!isMobile && (
-              <p style={{ width: "50vw" }} className="text-white-50 md:text-2xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
+          
+              <p style={{ width: "50vw" }} className="text-white-50 text-[10px] md:text-xl py-2 relative z-10 w-full  pointer-events-none text-wrap">
                We provide premium software consultancy. We build scalable digital products, SaaS platforms, and AI-powered systems for ambitious teams.
               </p>
-            )}
+           
 
         
           </div>
@@ -325,7 +331,7 @@ const Hero = () => {
 
         {/* right */}
 
-        <div className={`${isMobile ? 'p-6 pt-10' : 'p-24'} rounded-2xl`}>
+        <div className={`${isMobile ? 'p-6 pt-6' : 'p-24'} rounded-2xl`}>
 
           <HeroExperience />
         </div>
